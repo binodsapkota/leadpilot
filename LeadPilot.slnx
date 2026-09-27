@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LeadPilot.Api/LeadPilot.Api.csproj" />
+    <Project Path="src/LeadPilot.Core/LeadPilot.Core.csproj" />
+    <Project Path="src/LeadPilot.Crm/LeadPilot.Crm.csproj" />
+    <Project Path="src/LeadPilot.CrmServer/LeadPilot.CrmServer.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LeadPilot.Tests/LeadPilot.Tests.csproj" />
+  </Folder>
+</Solution>

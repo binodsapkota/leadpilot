@@ -1,0 +1,26 @@
+services:
+  crm:
+    build:
+      context: .
+      dockerfile: src/LeadPilot.CrmServer/Dockerfile
+    ports:
+      - "8081:8081"
+
+  api:
+    build: .
+    environment:
+      LeadPilot__Mode: ${LEADPILOT_MODE:-demo}
+      LeadPilot__OpenAIApiKey: ${OPENAI_API_KEY:-}
+      LeadPilot__OpenAIModel: ${OPENAI_MODEL:-gpt-4.1-mini}
+      LeadPilot__OpenAIEndpoint: ${OPENAI_BASE_URL:-}
+      LeadPilot__CrmMode: http
+      LeadPilot__CrmEndpoint: http://crm:8081/mcp
+    depends_on:
+      - crm
+
+  web:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - api

@@ -1,0 +1,14 @@
+bin/
+obj/
+*.user
+.vs/
+.vscode/
+.idea/
+TestResults/
+
+node_modules/
+dist/
+*.tsbuildinfo
+
+.env
+.env.local

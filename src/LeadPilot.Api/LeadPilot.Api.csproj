@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeadPilot.Core\LeadPilot.Core.csproj" />
+  </ItemGroup>
+
+</Project>
